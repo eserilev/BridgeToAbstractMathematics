@@ -1,0 +1,35 @@
+\documentclass[a4paper,12pt]{article}
+    \usepackage{mathtools}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{fancyhdr}
+    \usepackage{bm}
+    \usepackage{enumitem}
+    \pagestyle{fancy}
+    \lhead{Quiz 5, Math M393, Winter 2020}
+    \rhead{Eitan Seri-Levi}
+    \setlength{\headheight}{16pt}
+    \DeclarePairedDelimiter\abs{\lvert}{\rvert}
+    \makeatletter
+    \let\oldabs\abs
+    \def\abs{\@ifstar{\oldabs}{\oldabs*}}
+    \newcommand{\R}{\mathbb{R}}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+    \begin{document}
+    \begin{itemize}
+      \item[1.] For all sets $A,B$ and $C$, prove if $A \subseteq B$ and $B \subseteq C$ then $A \subseteq C$
+      \\
+      Suppose x is some element in $A$. Since $A$ is a subset of $B$, that means x is in $B$. Since $B$ is a subset of $C$ that also means that x is in $C$. Since $x$ is some element in $A$, which is also in $C$, it follows that $A$ is a subset of $C$
+      \item[2.] List all the proper subsets of $\{1, \{1,2\}\}$     
+      \\
+      The proper subsets of $1$ are: $\varnothing$
+      \\
+      The proper subsets of $\{1,2\}$ are: $\varnothing, \{1\}, \{2\} $
+      \\
+      Therefore the proper subsets of $\{1, \{1,2\}\}$ are: $\varnothing, \{1\}, \{2\}$
+
+
+
+    \end{itemize} 
+\end{document}

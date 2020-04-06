@@ -1,0 +1,43 @@
+\documentclass[a4paper,12pt]{article}
+    \usepackage{mathtools}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{fancyhdr}
+    \usepackage{bm}
+    \usepackage{enumitem}
+    \pagestyle{fancy}
+    \lhead{Quiz 1, Math M393, Winter 2020}
+    \rhead{Eitan Seri-Levi}
+    \setlength{\headheight}{16pt}
+    \DeclarePairedDelimiter\abs{\lvert}{\rvert}
+    \makeatletter
+    \let\oldabs\abs
+    \def\abs{\@ifstar{\oldabs}{\oldabs*}}
+    \newcommand{\R}{\mathbb{R}}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+    \begin{document}
+    \begin{itemize}
+      \item[1.] Construct a truth table for the following statement $P \lor \neg Q$.
+      \begin{displaymath}
+        \begin{array}{|c c c|c|}
+        P & Q & \neg Q & P \lor \neg Q\\
+        \hline
+        T & T & F & T\\
+        T & F & T & T\\
+        F & T & F & F\\
+        F & F & T & T\\
+        \end{array}
+      \end{displaymath} 
+      \item[2.] Give a useful denial to the following statement: Cleveland will win the first game or the second game
+      \\
+      P = Cleveland will win the first game
+      \\
+      Q = Cleveland will win the second game 
+      \\
+      Therefore the original proposition is $P \lor Q$\\
+      The denial of the proposition would be $\neg(P \lor Q)$\\
+      Using DeMorgans law $\neg(P \lor Q) = \neg P \land \neg Q$.\\
+      Therefore a useful denial would be: \bf{Cleveland will not win the first game and will not win the second game}
+    \end{itemize} 
+\end{document}

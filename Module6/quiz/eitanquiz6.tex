@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+    \usepackage{mathtools}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{fancyhdr}
+    \usepackage{bm}
+    \usepackage{enumitem}
+    \pagestyle{fancy}
+    \lhead{Quiz 6, Math M393, Winter 2020}
+    \rhead{Eitan Seri-Levi}
+    \setlength{\headheight}{16pt}
+    \DeclarePairedDelimiter\abs{\lvert}{\rvert}
+    \makeatletter
+    \let\oldabs\abs
+    \def\abs{\@ifstar{\oldabs}{\oldabs*}}
+    \newcommand{\R}{\mathbb{R}}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+    \begin{document}
+    \begin{itemize}
+      \item[1.] Define $\mathbb{N} = \{1, 2, 3, 4, ...\}$ and $n\mathbb{Z}=\{..., -2n, -n, 0, n, 2n, ...\}$ for $n \in \mathbb{N}$. Let $\mathbf{M} = \{n \mathbb{Z} : n \in \mathbb{N}\}$. Find $\cap \mathbf{M}$.
+      \\
+      $M_n = n\mathbb{Z}$ where $M_n \in \mathbf{M}$
+      \\
+      \begin{align*}
+        M_1 &= \{..., -2, -1, 0, 1, 2, ...\}\\
+        M_2 &= \{..., -4, -2, 0, 2, 4, ....\}\\
+        M_3 &= \{..., -6, -3, 0, 3, 6, ....\}\\
+        M_n &= n\mathbb{Z}\\
+      \end{align*}
+      \begin{align*}
+        \bigcap_{M \in \mathbf{M}} M &= {\{ x : x \in M \text{ for every } M \in \mathbf{M}\}}\\
+        \mathbf{M} &= \{\mathbb{Z}, 2\mathbb{Z}, 3\mathbb{Z}, ...\}
+      \end{align*}
+      The intersection is therefore the empty set, since there is no integer that is apart of every set in $\mathbf{M}$
+      \begin{align*}
+        \bigcap_{M \in \mathbf{M}}M = \emptyset
+      \end{align*}
+      \item[2.] Let $\mathbf{B}$ be a nonempty family of sets. For every $B \in \mathbf{B}$ prove that $B \subseteq \bigcup_{C \in \mathbf{B}}C$
+      \\
+      Suppose for some element $x :x \in B$ then $x \in C$ for every $C \in \mathbf{B}$. The set C is a variable, it can stand for any set in the family $\mathbf{B}$.
+      \\
+      Therefore: $x\in \bigcup_{C\in \mathbf{B}}C$ and since $B \in \mathbf{B}$ we have shown that $B \subseteq \bigcup_{C\in \mathbf{B}} C$
+    \end{itemize} 
+\end{document}

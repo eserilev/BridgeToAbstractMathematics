@@ -1,0 +1,108 @@
+\documentclass[a4paper,12pt]{article}
+    \usepackage{mathtools}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{fancyhdr}
+    \usepackage{bm}
+    \usepackage{enumitem}
+    \pagestyle{fancy}
+    \lhead{Midterm, Math M393, Winter 2020}
+    \rhead{Eitan Seri-Levi}
+    \setlength{\headheight}{16pt}
+    \DeclarePairedDelimiter\abs{\lvert}{\rvert}
+    \makeatletter
+    \let\oldabs\abs
+    \def\abs{\@ifstar{\oldabs}{\oldabs*}}
+    \newcommand{\R}{\mathbb{R}}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+    \begin{document}
+    \begin{itemize}
+      \item[1.] Construct a truth table for the following statement. $\lnot p \land q$.
+      \begin{displaymath}
+        \begin{array}{|c c c|c|}
+        p &\lnot p & q  & \lnot p \land q\\
+        \hline
+        T & F & T & F\\
+        T & F & F & F \\
+        F & T & T & T\\
+        F & T & F & F\\
+        \end{array}
+      \end{displaymath}  
+      \item[2.] For propositions p and q, prove $p \rightarrow q$ is equivalent to $\lnot q \rightarrow \lnot p$ by applying a truth table. 
+      \begin{displaymath}
+        \begin{array}{|c c c c|c|c|}
+        p  & q & \neg p & \neg q  & p \rightarrow q & \neg q \rightarrow \neg p\\
+        \hline
+        T & T & F & F & T & T\\
+        T & F & F & T & F & F\\
+        F & T & T & F & T & T \\
+        F & F & T & T & T & T\\
+        \end{array}
+      \end{displaymath}   
+      Therefore we have shown the two statements are equivalent
+      \item[3.] Let $\mathbb{R}$ deonte the universe of real numbers. Determine if the following statemenet is true or false:
+      \\
+      $(\forall x)(\exists y)(x + y > 0)$
+      \\ 
+      The statement reads, for all $x$ there exists a $y$ such that $x+y > 0$. This statement is true, for all $x$ there does exist some $y$ value such that $x+ y>0$. 
+      \item[4.] Suppose $x_1$ and $x_2$ are integers. Prove or provide a counterexample: If $x_1$ divides $x_2$ then $x_1$ divides $x_2(x_1+1)$
+      \\
+      Suppose $x_1$ divides $x_2$ there exists an integer $k$ such that $x_2 = kx_1$ and $x_2/x_1 = k$
+      \\
+      If $x_1$ divides $x_2(x_1+1)$
+      \begin{align*}
+        x_2(x_1+1) &= mx_1 \text{ for some integer m}\\
+        x_2/x_1(x_1+1) &= m\\
+        k(x_1 +1) &= m\\
+        x_1 + 1 &= m/k\\
+      \end{align*}
+      Since $x_1 + 1$ is an integer, $m/k$ is also an integer. Therefore we have shown that $x_1$ divides $x_2(x_1+1)$
+      \item[5.] Suppose a is a positive integer. Prove the following statement by contradiction: If $a^2$ is even then a is even.
+      \\ 
+      Proof by contradiction: Assume $a$ is a positive integer and $a^2$ is even, but $a$ is odd.
+      \\
+      Since $a$ is odd, $a=2k+1$ for some integer $k$. then
+      \begin{align*}
+        a^2 &= (2k+1)^2\\
+        &= 4k^2 + 4k +1\\
+        &=2(2k^2+2k)+1
+      \end{align*}
+      Let $m=2k^2+2k$
+      \begin{align*}
+        a^2 &=2(2k^2+2k)+1\\
+        &= 2m + 1
+      \end{align*}
+      So by definition $a^2$ is odd. But this is impossible because $a^2$ is even, therefore if $a^2$ is even then $a$ is even.
+      \item[6.] Provide either a proof or counterexample for the following statement:
+      \\
+      For all positive integers $n$, $n(n-2) \geq 0$
+      \\
+      Let $n=1$
+      \begin{align*}
+        1(1-2) = 1(-1) = -1
+      \end{align*}
+      Therefore the statement $n(n-2) \geq 0$ is false since $n(n-2)=-1$ when $n=1$
+      \item[7.] Define $\mathbb{N}=\{1,2,3,...\}$ and $n\mathbb{Z}=\{...,-2n, -n, 0, n, 2n,...\}$ for $n \in \mathbb{N}$. Let $\mathbf{M}=\{n\mathbb{Z}: n \in \mathbb{N}\}$. Prove that $\bigcup \mathbf{M} \subseteq \mathbb{Z}$
+      \\
+      Inductive step:
+      \\
+      $M_1 \subseteq \mathbb{Z}$, Where $M_1 = \{\mathbb{Z}: n \in \mathbb{N}\}$ 
+      \\
+      Proof by induction:
+      \\
+      If $M_n \subseteq \mathbb{Z}$ then $M_{n+1} \subseteq \mathbb{Z}$
+      \\
+      $M_{n+1} = \{(n+1)\mathbb{Z}: n \in \mathbb{N}\}$
+      \\
+      $M_{n+1} = \{... , -2(n+1), -(n+1), 0, (n+1), 2(n+1), ...\}$
+      \\
+      Since $n \in \mathbb{N}$ by definition $n+1 \in \mathbb{N}$ since 1 is an integer.
+      \\
+      let $k=n+1$ then $M_{n+1}=\{...,-2k, -k, 0, k, 2k, ...\}$
+      \\
+      \\
+      $M_{n+1}=\{k\mathbb{Z}: k \in \mathbb{N}\}$ and $M_{n+1}\subseteq \mathbb{Z}$
+      Therefore $\bigcup \mathbf{M} \subseteq \mathbb{Z}$
+    \end{itemize} 
+\end{document}

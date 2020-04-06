@@ -1,0 +1,44 @@
+\documentclass[a4paper,12pt]{article}
+    \usepackage{mathtools}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{fancyhdr}
+    \usepackage{bm}
+    \usepackage{enumitem}
+    \pagestyle{fancy}
+    \lhead{Quiz 4, Math M393, Winter 2020}
+    \rhead{Eitan Seri-Levi}
+    \setlength{\headheight}{16pt}
+    \DeclarePairedDelimiter\abs{\lvert}{\rvert}
+    \makeatletter
+    \let\oldabs\abs
+    \let\biconditional\leftrightarrow
+    \def\abs{\@ifstar{\oldabs}{\oldabs*}}
+    \newcommand{\R}{\mathbb{R}}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+    \begin{document}
+    \begin{itemize}
+      \item[1.] Suppose a and b are positive integers. Prove the following by contradiction: If a is even then a + 1 is odd
+      \\
+      Assume that if $a$ is even then $a + 1$ is even.
+      \\
+      Therefore $n=2k$ for some positive integer $k$ and $n+1=2j$ for some positive integer $j$.
+      \\
+      Subtracting we get
+      \begin{align*}
+        n + 1 - n &= 2j - 2k \\
+        1 &= 2j - 2k\\
+        \frac{1}{2}&=j - k\\ 
+      \end{align*}
+      Since $j$ and $k$ are both integers, the difference of two integers is necessarily an integer. Therefore the stamenet if a is even a + 1 is even is a contradiction and so if a is even then a + 1 is odd
+      \item[2.] Provide either a proof or counterexample for the following statement: For all positive real numbers x, x(x-1) $\geq$ 0
+      Assume $x=1/2$. Therefore $x^2=1/4$. Consider $x(x-1)$ as $x^2 - x$.
+      \begin{align*}
+        x^2 - x &= 1/4 - 1/2 \\
+        x^2 - x &= - 1/4\\
+        x(x-1) &= -1/4
+      \end{align*}
+      This is a counterxample to the original statement, since $x(x-1) < 0$ in the case where $x=1/2$.
+    \end{itemize} 
+\end{document}

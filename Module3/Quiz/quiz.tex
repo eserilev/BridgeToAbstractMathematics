@@ -1,0 +1,43 @@
+\documentclass[a4paper,12pt]{article}
+    \usepackage{mathtools}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{fancyhdr}
+    \usepackage{bm}
+    \usepackage{enumitem}
+    \pagestyle{fancy}
+    \lhead{Quiz 3, Math M393, Winter 2020}
+    \rhead{Eitan Seri-Levi}
+    \setlength{\headheight}{16pt}
+    \DeclarePairedDelimiter\abs{\lvert}{\rvert}
+    \makeatletter
+    \let\oldabs\abs
+    \def\abs{\@ifstar{\oldabs}{\oldabs*}}
+    \newcommand{\R}{\mathbb{R}}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+    \begin{document}
+    \begin{itemize}
+      \item[1.] Let $\mathbb{R}$ denote the universe of real numbers. Determine if the following statement is true or false:
+      \[
+        (\exists x)(\forall y)(x \leq y)
+      \]
+      This statement is true. There exists an x for all y such that x is less than or equal to y. That is, in the universe of real numbers, there will always exist a value x that is less than or equal to a value y. 
+
+      \item[2.] Suppose $x_1$, $x_2$ and $x_3$ are integers. Prove if $x_1$ divides $x_2$, then $x_1$ divides $x_2x_3$
+      \\
+      Let $k$ be an integer and $x_1$ divides $x_2$ therefore $x_2 = kx_1$ for some integer $k$.
+      \\
+      To check if $x_1$ divides $x_2x_3$:
+      \begin{align*}
+        x_2x_3 &= (kx_1)x_3 \\
+        &= x_1(kx_3)\\
+      \end{align*}
+      Therefore $kx_3$ must be an integer. We can say that $kx_3 = j$ where $j$ is an integer.
+      \begin{align*}
+        x_2x_3 &= jx_1 \\
+        \frac{x_2x_3}{x_1} &= j
+      \end{align*}
+      Therefore $x_1$ divides $x_2x_3$
+    \end{itemize} 
+\end{document}
